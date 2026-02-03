@@ -1,5 +1,6 @@
 services:
   github-readme-stats:
+  container_name: github-readme-stats
     build: .
     ports:
       - "10008:9000"
