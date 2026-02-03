@@ -1,0 +1,13 @@
+services:
+  github-readme-stats:
+    build: .
+    ports:
+      - "9000:9000"
+    environment:
+      - PAT_1=${PAT_1}
+      - CACHE_SECONDS=${CACHE_SECONDS:-86400}
+      - WHITELIST=${WHITELIST}
+      - GIST_WHITELIST=${GIST_WHITELIST}
+      - EXCLUDE_REPO=${EXCLUDE_REPO}
+      - FETCH_MULTI_PAGE_STARS=${FETCH_MULTI_PAGE_STARS:-false}
+    restart: always
