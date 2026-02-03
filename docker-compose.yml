@@ -2,7 +2,7 @@ services:
   github-readme-stats:
     build: .
     ports:
-      - "9000:9000"
+      - "10008:9000"
     environment:
       - PAT_1=${PAT_1}
       - CACHE_SECONDS=${CACHE_SECONDS:-86400}
